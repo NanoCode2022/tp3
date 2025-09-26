@@ -9,8 +9,10 @@ class Envio:
         self.algimpositivo = algimpositivo
 
     def mon_env(self):
-        return self.cod.split("|")[0]
+        return self.cod.strip().split("|")[0].zfill(2)
+
     def mon_pago(self):
-        return self.cod.split("|")[1]
+        return self.cod.strip().split("|")[1].zfill(2)
+
     def cod_pag(self):
         return self.cod.split("|")[2]
